@@ -170,12 +170,12 @@ export default function Home() {
       });
 
       const opt = {
-        margin:       15,
-        filename:     'Contract_Agreement.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      };
+  margin: 15,
+  filename: 'Contract_Agreement.pdf',
+  image: { type: 'jpeg' as const, quality: 0.98 },
+  html2canvas: { scale: 2 },
+  jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+};
 
       html2pdf().set(opt).from(printContainer).save();
     } catch (err) {
@@ -327,7 +327,7 @@ export default function Home() {
                     classNames = 'font-bold text-base text-blue-400 mb-4 pb-2 border-b border-slate-700';
                   } else if (isSectionHeader) {
                     classNames = 'font-semibold text-slate-100 mt-4';
-                  }KKKKKKKS
+                  }
 
                   return (
                     <div key={index} className={classNames}>
